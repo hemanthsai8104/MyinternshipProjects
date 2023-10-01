@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="logo.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>Hi,I'm <span>Hemanth Sai</span></h1>
+        </div>
+      </div>
+    </div>
+    <! -------about------>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="user.jpeg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hello, I'm Hemanth Sai, a passionate web developer with a knack
+              for turning ideas into visually stunning and functional websites.
+              I believe in the power of the web to connect people, solve
+              problems, and elevate businesses, and I'm on a mission to make the
+              digital world a better place, one website at a time.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+              <ul>
+                <li><span>Schooling</span><br />Thrividha-2019</li>
+                <li><span>Intermediate</span><br />Sri Vagdevi-2021</li>
+                <li><span>Graduation</span><br />Ongoing</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="skills">
+              <ul>
+                <li><span>Programing</span><br />Python</li>
+                <li><span>Web Development</span><br />Html,Css,javascript</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Interships</span><br />Motion Cut</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------portfolio------>
+    <div id="Portfolio">
+      <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="work-1.jpg" />
+            <div class="layer">
+              <h3>Social Media</h3>
+              <p>app allows you to connect with people</p>
+              <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-2.jpg" />
+            <div class="layer">
+              <h3>Music App</h3>
+              <p>app allows you to all kinds of music</p>
+              <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="work-3.jpeg" />
+            <div class="layer">
+              <h3>Shopping Website</h3>
+              <p>app allows people to purchase eletronic applainces</p>
+              <a href="#"><i class="fa-regular fa-share-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">see more</a>
+      </div>
+    </div>
+    <!------contact----->
+    <div id="Contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>hemanthsai8104@gmail.com</p>
+            <p>9948760061</p>
+            <div social-icons>
+              <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href="my-cv.pdf" download class="btn btn1"
+              ><span>CV Download</span></a
+            >
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input
+                type="text"
+                name="Name"
+                placeholder="your name "
+                required
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="your mail"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="4"
+                placeholder="your Message"
+              ></textarea>
+              <button type="submit" class="btn btn1">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
